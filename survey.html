@@ -192,15 +192,8 @@
 
   .result-top {
     background: var(--color-primary);
-    padding: 52px 24px 64px;
+    padding: 64px 24px 64px;
     text-align: center;
-  }
-
-  .result-type-label {
-    color: rgba(255,255,255,0.7);
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 8px;
   }
 
   .result-type-name {
@@ -329,7 +322,6 @@
 
   <div id="screen-result" class="screen">
     <div class="result-top">
-      <div class="result-type-label" id="r-type-label">결과 유형</div>
       <div class="result-type-name" id="r-type-name">균형형</div>
     </div>
     <div class="result-card">
@@ -411,27 +403,22 @@ const questions = [
 
 const results = [
   {
-    type: "유형 1",
     title: "타인지각 우세형",
-    desc: "당신은 타인의 시선และ 반응을 통해 자신을 이해하는 경향이 강합니다. 관계 속에서 세심한 배려심을 발휘하지만, 때로는 스스로의 감정과 생각에도 귀를 기울여 보세요. 내면의 목소리가 가장 솔직한 나침반이 될 수 있습니다."
+    desc: "당신은 타인의 시선과 반응을 통해 자신을 이해하는 경향이 강합니다. 관계 속에서 세심한 배려심을 발휘하지만, 때로는 스스로의 감정과 생각에도 귀를 기울여 보세요. 내면의 목소리가 가장 솔직한 나침반이 될 수 있습니다."
   },
   {
-    type: "유형 2",
     title: "타인지각 성향형",
     desc: "주변의 반응과 평가가 당신의 자기 이해에 중요한 역할을 합니다. 사회적 감수성이 뛰어난 강점이 있지만, 가끔은 외부 의견보다 자신의 내면 경험을 먼저 살피는 연습을 해보세요."
   },
   {
-    type: "유형 3",
     title: "균형형",
     desc: "자기 내면의 목소리와 타인의 반응을 균형 있게 참고하는 유형입니다. 두 가지 시각을 유연하게 활용하는 것이 강점이지만, 판단 기준을 더 명확히 세우면 자기 이해가 한층 깊어질 수 있습니다."
   },
   {
-    type: "유형 4",
     title: "자기지각 성향형",
     desc: "자신의 행동, 감정, 경험을 내면에서 먼저 탐색하는 경향이 강합니다. 자기 이해의 깊이가 탄탄한 강점이 있습니다. 때로는 타인의 시각도 자신을 새롭게 발견하는 거울이 될 수 있음을 기억하세요."
   },
   {
-    type: "유형 5",
     title: "자기지각 우세형",
     desc: "자신의 내면을 깊이 탐색하고 스스로 판단하는 자기지각이 매우 강한 유형입니다. 독립적인 사고가 큰 강점이지만, 타인의 관점을 유연하게 받아들이는 자세도 함께 키워나가면 더욱 성장할 수 있습니다."
   }
@@ -483,7 +470,6 @@ function showResult() {
   const selfPct = Math.round(score1 / 10 * 100);
   const otherPct = 100 - selfPct;
 
-  document.getElementById('r-type-label').textContent = r.type;
   document.getElementById('r-type-name').textContent = r.title;
   document.getElementById('r-title').textContent = r.title;
   document.getElementById('r-self').textContent = selfPct + '%';
