@@ -3,8 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>자기지각 유형 설문</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>나와의 행복</title>
+<link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff2" rel="preload" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face {
+  font-family: 'LeeSeoyun';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+</style>
 <style>
   /* =============================================
      🎨 색상 & 폰트 수정 가능 영역
@@ -22,7 +30,7 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'LeeSeoyun', sans-serif;
     background: #f0f4f8;
     display: flex;
     align-items: center;
@@ -298,19 +306,18 @@
 
     <!-- ✏️ 여기서 설문 제목을 수정하세요 -->
     <div class="survey-main-title">
-      자기지각 vs 타인지각<br>유형 설문
+      행복의 조건 7조 설문
     </div>
 
     <!-- ✏️ 여기서 설명 문구를 수정하세요 -->
     <div class="survey-subtitle">
-      총 10개의 질문에 솔직하게 답해주세요.<br>
-      나의 지각 유형을 알아볼 수 있습니다.
+      총 10개의 질문에 솔직하게 답해주세요.
     </div>
 
     <div class="start-spacer"></div>
 
     <button class="start-btn" onclick="startSurvey()">설문 시작하기</button>
-    <div class="made-with">자기지각 · 타인지각 유형 검사</div>
+    <div class="made-with">나와의 행복</div>
   </div>
 
 
@@ -330,7 +337,7 @@
       <button class="opt-btn" id="opt1" onclick="selectAnswer(1)"></button>
       <button class="opt-btn" id="opt2" onclick="selectAnswer(2)"></button>
     </div>
-    <div class="q-footer">자기지각 유형 검사</div>
+    <div class="q-footer">행복의 조건 7조</div>
   </div>
 
 
